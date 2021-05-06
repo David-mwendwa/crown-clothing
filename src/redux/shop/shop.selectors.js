@@ -28,3 +28,4 @@ export const selectCollection = (collectionUrlParam) =>
       (collection) => collection.id === COLLECTION_ID_MAP[collectionUrlParam]
     )*/ // Before normalization
   );
+ 
