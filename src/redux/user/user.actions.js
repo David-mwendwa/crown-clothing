@@ -1,5 +1,4 @@
 import {
-  SET_CURRENT_USER,
   GOOGLE_SIGN_IN_START,
   GOOGLE_SIGN_IN_SUCCESS,
   GOOGLE_SIGN_IN_FAILURE,
@@ -8,14 +7,8 @@ import {
   EMAIL_SIGN_IN_FAILURE,
 } from './user.types';
 
-export const setCurrentUser = (user) => ({
-  type: SET_CURRENT_USER,
-  payload: user,
-});
-
-export const googleSignInStart = (emailAndPassword) => ({
+export const googleSignInStart = () => ({
   type: GOOGLE_SIGN_IN_START,
-  payload: emailAndPassword
 });
 
 export const googleSignInSuccess = (user) => ({
@@ -28,8 +21,9 @@ export const googleSignInFailure = (error) => ({
   payload: error
 })
 
-export const emailSignInStart = () => ({
+export const emailSignInStart = (emailAndPassword) => ({
   type: EMAIL_SIGN_IN_START,
+  payload: emailAndPassword,
 });
 
 export const emailSignInSuccess = (user) => ({
